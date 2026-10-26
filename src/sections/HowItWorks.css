@@ -1,0 +1,529 @@
+/* ===== How it works section ===== */
+
+.how-section {
+  padding: 100px 24px;
+  background: #ffffff;
+  scroll-margin-top: 76px;
+}
+
+.how-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.how-heading {
+  max-width: 790px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.how-heading h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(35px, 4.4vw, 51px);
+  font-weight: 760;
+  line-height: 1.14;
+  letter-spacing: -0.05em;
+  text-wrap: balance;
+}
+
+.how-heading h2 span {
+  display: block;
+  margin-top: 6px;
+  color: var(--color-brand);
+}
+
+.how-heading > p {
+  max-width: 650px;
+  margin: 19px auto 0;
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* ===== Three-step journey ===== */
+
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.how-step-wrapper {
+  position: relative;
+  min-width: 0;
+}
+
+.how-step-card {
+  height: 100%;
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid #e0e9f6;
+  border-radius: 20px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(0, 215, 236, 0.045),
+      transparent 37%
+    ),
+    #fbfcff;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-color 200ms ease;
+}
+
+.how-step-card:hover {
+  transform: translateY(-4px);
+  border-color: #c4d9f8;
+  box-shadow: 0 16px 35px rgba(2, 26, 66, 0.065);
+}
+
+.how-step-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.how-step-number {
+  color: var(--color-brand);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.how-step-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid #dce8fb;
+  border-radius: 13px;
+  color: var(--color-brand);
+  background: #edf4ff;
+}
+
+.how-step-card h3 {
+  margin: 19px 0 9px;
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 750;
+  line-height: 1.4;
+  letter-spacing: -0.035em;
+}
+
+.how-step-description {
+  min-height: 66px;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* ===== Interface previews ===== */
+
+.process-visual {
+  min-width: 0;
+  min-height: 220px;
+  margin-top: 23px;
+  padding: 14px;
+  border: 1px solid #e1e9f5;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.process-visual-label,
+.process-continue-heading > span {
+  color: #8291a6;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.process-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 15px;
+}
+
+.process-choice {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 66px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid #e8eef7;
+  border-radius: 10px;
+  color: #6d7f97;
+  background: #fbfcff;
+}
+
+.process-choice span {
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.process-choice.selected {
+  border-color: #a8c9ff;
+  color: var(--color-brand);
+  background: #f0f6ff;
+}
+
+.process-choice .choice-check {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.process-visual-note {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 13px;
+  color: #74859c;
+  font-size: 9px;
+}
+
+.process-visual-note > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #31b886;
+}
+
+/* Step 2 chat preview */
+
+.connect-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.process-message-header {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #edf1f7;
+}
+
+.process-avatar {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  color: #274b94;
+  background: #dce8ff;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.process-message-header > div:nth-child(2) {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.process-message-header strong {
+  color: #34445d;
+  font-size: 10px;
+}
+
+.process-message-header small {
+  color: #8896a8;
+  font-size: 8px;
+}
+
+.process-message-header > svg {
+  flex-shrink: 0;
+  color: var(--color-brand);
+}
+
+.process-chat-bubble {
+  display: flex;
+  max-width: 90%;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid #e5ebf4;
+  border-radius: 4px 10px 10px 10px;
+  color: #586b84;
+  background: #f7f9fd;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.process-chat-bubble small {
+  color: #9aa6b7;
+  font-size: 8px;
+  text-align: right;
+}
+
+.process-chat-bubble.sent {
+  align-self: flex-end;
+  border-color: #dce9ff;
+  border-radius: 10px 4px 10px 10px;
+  color: #ffffff;
+  background: var(--color-brand);
+}
+
+.process-chat-bubble.sent small {
+  color: #e2ecff;
+}
+
+.process-message-composer {
+  display: flex;
+  min-height: 35px;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding: 5px 6px 5px 10px;
+  border: 1px solid #e6ebf4;
+  border-radius: 9px;
+  color: #8f9caf;
+  font-size: 9px;
+}
+
+.process-message-composer > span:first-child {
+  flex: 1;
+}
+
+.process-send-icon {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border-radius: 7px;
+  color: #ffffff;
+  background: var(--color-brand);
+}
+
+/* Step 3 communication options */
+
+.process-continue-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 17px;
+}
+
+.process-continue-heading svg {
+  color: var(--color-brand);
+}
+
+.process-continue-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 9px;
+  border: 1px solid #e6edf8;
+  border-radius: 10px;
+  background: #fbfcff;
+}
+
+.process-continue-row + .process-continue-row {
+  margin-top: 9px;
+}
+
+.continue-option-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 9px;
+  color: var(--color-brand);
+  background: #eaf2ff;
+}
+
+.process-continue-row > div {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.process-continue-row strong {
+  color: #34445d;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.process-continue-row small {
+  color: #8795a9;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.process-continue-row > svg {
+  flex-shrink: 0;
+  color: #22945e;
+}
+
+.process-continue-note {
+  margin-top: 13px;
+  color: #7f8da2;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+/* Connect the cards visually */
+
+.how-step-connector {
+  position: absolute;
+  z-index: 2;
+  top: 53%;
+  right: -22px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid #dce8f7;
+  border-radius: 50%;
+  color: var(--color-brand);
+  background: #ffffff;
+  transform: translate(50%, -50%);
+}
+
+/* Bottom link */
+
+.how-bottom-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin-top: 33px;
+  padding: 17px 20px;
+  border: 1px solid #e3eaf5;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.how-bottom-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 10px;
+  color: var(--color-brand);
+  background: #edf4ff;
+}
+
+.how-bottom-note p {
+  flex: 1;
+  margin: 0;
+  color: #667993;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.how-bottom-note > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  color: var(--color-brand);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .how-steps {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .how-step-card {
+    padding: 22px;
+  }
+
+  .how-step-description {
+    min-height: 0;
+    max-width: 650px;
+  }
+
+  .process-visual {
+    width: 100%;
+    max-width: 480px;
+    min-height: 0;
+  }
+
+  .how-step-connector {
+    top: auto;
+    right: 50%;
+    bottom: -26px;
+    transform: translate(50%, 50%) rotate(90deg);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+  .how-section {
+    padding: 72px 18px;
+  }
+
+  .how-heading {
+    margin-bottom: 36px;
+  }
+
+  .how-heading h2 {
+    font-size: 35px;
+  }
+
+  .how-heading > p {
+    font-size: 14px;
+  }
+
+  .how-step-card {
+    padding: 18px;
+    border-radius: 17px;
+  }
+
+  .how-step-card h3 {
+    font-size: 19px;
+  }
+
+  .process-visual {
+    padding: 12px;
+  }
+
+  .how-bottom-note {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 11px;
+    padding: 15px;
+  }
+
+  .how-bottom-note p {
+    width: calc(100% - 50px);
+  }
+
+  .how-bottom-note > a {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 9px;
+    background: #f0f5ff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .how-step-card {
+    transition: none;
+  }
+}
