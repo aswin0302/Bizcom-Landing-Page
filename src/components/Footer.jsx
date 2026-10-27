@@ -25,7 +25,7 @@ function Footer({ onOpenEnquiry }) {
           <div className="footer-brand-column">
             <a href="#home" className="footer-brand">
               <img
-                src="/public/Bizcom Gradient Chat Logo.png"
+                src={`${import.meta.env.BASE_URL}bizcom-logo.png`}
                 alt="Bizcom"
                 className="footer-logo"
                />

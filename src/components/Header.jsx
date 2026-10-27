@@ -34,7 +34,7 @@ function Header({ onOpenEnquiry }) {
         >
           <img
             className="brand-logo"
-            src="/Bizcom%20Gradient%20Chat%20Logo.png"
+            src={`${import.meta.env.BASE_URL}bizcom-logo.png`}
             alt="Bizcom"
           />
         </a>
