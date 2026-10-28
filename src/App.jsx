@@ -136,7 +136,7 @@ function AppLayout() {
 }
 
 function App() {
-  const basename = import.meta.env.PROD ? "/bizcom" : "/";
+  const basename = import.meta.env.BASE_URL;
 
   return (
     <BrowserRouter basename={basename}>
