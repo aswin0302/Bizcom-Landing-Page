@@ -8,6 +8,18 @@ APP_DIR="/home/transport/public_html/website_bizcom"
 
 cd "$APP_DIR"
 
+# Use the Node version pinned in .nvmrc, only for this project (installs nvm/Node if missing)
+export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+if [ ! -s "$NVM_DIR/nvm.sh" ]; then
+  echo "==> Installing nvm"
+  curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+fi
+# shellcheck disable=SC1091
+. "$NVM_DIR/nvm.sh"
+nvm install   # reads .nvmrc, no-op if already installed
+nvm use
+echo "==> Node $(node -v)"
+
 echo "==> Pulling latest $BRANCH"
 git fetch origin "$BRANCH"
 git checkout "$BRANCH"
