@@ -168,14 +168,14 @@
 
 .about-channel-card strong {
   color: var(--color-text);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
 }
 
 .about-channel-card small {
   margin-top: 5px;
   color: var(--color-muted);
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.5;
 }
 

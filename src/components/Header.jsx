@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import "./Header.css";
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About Bizcom", href: "#about" },
-  { label: "Who It's For", href: "#audience" },
-  { label: "Features", href: "#features" },
-  { label: "Problems & Solutions", href: "#problems" },
+  { label: "Home", to: "/", end: true },
+  { label: "Features", to: "/features" },
+  { label: "Solutions", to: "/solutions" },
+  { label: "How It Works", to: "/how-it-works" },
+  { label: "Pricing", to: "/pricing" },
+  { label: "Contact Us", to: "/contact" },
 ];
 
 function Header({ onOpenEnquiry }) {
@@ -25,10 +27,9 @@ function Header({ onOpenEnquiry }) {
   return (
     <header className="site-header">
       <div className="header-container">
-        {/* Bizcom Logo */}
-        <a
+        <NavLink
           className="brand"
-          href="#home"
+          to="/"
           aria-label="Bizcom home"
           onClick={closeMenu}
         >
@@ -37,36 +38,36 @@ function Header({ onOpenEnquiry }) {
             src={`${import.meta.env.BASE_URL}bizcom-logo.png`}
             alt="Bizcom"
           />
-        </a>
+        </NavLink>
 
-        {/* Navigation */}
         <nav
           className={`main-nav ${menuOpen ? "is-open" : ""}`}
           aria-label="Main navigation"
         >
           {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.end}
               onClick={closeMenu}
-              className="nav-link"
+              className={({ isActive }) =>
+                `nav-link ${isActive ? "active" : ""}`
+              }
             >
               {item.label}
-            </a>
+            </NavLink>
           ))}
 
-          {/* Mobile CTA */}
           <button
             type="button"
-            onClick={handleEnquiry}
             className="mobile-contact-link"
+            onClick={handleEnquiry}
           >
             Talk to Our Team
             <ArrowUpRight size={17} />
           </button>
         </nav>
 
-        {/* Desktop CTA */}
         <button
           type="button"
           className="header-cta"
@@ -76,7 +77,6 @@ function Header({ onOpenEnquiry }) {
           <ArrowUpRight size={17} />
         </button>
 
-        {/* Mobile Menu Toggle */}
         <button
           type="button"
           className="mobile-menu-button"

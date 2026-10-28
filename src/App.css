@@ -47,3 +47,98 @@
 main {
   width: 100%;
 }
+
+/* =================================
+   BIZCOM TYPOGRAPHY SYSTEM
+================================= */
+
+/* H1 — Sora / 72px / Bold 700 */
+.hero-section .hero-copy h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-h1);
+  font-weight: var(--weight-h1);
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+
+/* H2 — Sora / 52px / Semibold 600 */
+.about-section .about-copy h2,
+.audience-section .audience-heading h2,
+.features-section .features-heading h2,
+.problems-section .problems-heading h2,
+.how-section .how-heading h2,
+.contact-cta-section .contact-cta-content h2,
+.enquiry-modal .enquiry-header h2,
+.enquiry-modal .enquiry-success h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-h2);
+  font-weight: var(--weight-h2);
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+/* H3 — Sora / 26px / Medium 500 */
+.audience-section .audience-card h3,
+.features-section .feature-detail-copy h3,
+.problems-section .problem-story .story-title,
+.problems-section .problems-cta-copy h3,
+.how-section .how-step-card h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-h3);
+  font-weight: var(--weight-h3);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+/* H4 — Sora / 22px / Medium 500 */
+.problems-section .story-solution h4 {
+  font-family: var(--font-heading);
+  font-size: var(--font-h4);
+  font-weight: var(--weight-h4);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+/* Main website body copy — Inter / 16px / 24px */
+.hero-section .hero-description,
+.about-section .about-description,
+.audience-section .audience-heading > p,
+.audience-section .audience-card > p,
+.features-section .features-heading > p,
+.features-section .feature-detail-copy > p,
+.problems-section .problems-heading > p,
+.problems-section .story-description,
+.problems-section .problems-cta-copy p,
+.how-section .how-heading > p,
+.how-section .how-step-description,
+.contact-cta-section .contact-cta-content > p,
+.enquiry-modal .enquiry-header > p,
+.enquiry-modal .enquiry-success > p {
+  font-family: var(--font-body);
+  font-size: var(--font-body-size);
+  font-weight: 400;
+  line-height: var(--line-body);
+  letter-spacing: 0;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  :root {
+    --font-h1: 42px;
+    --font-h2: 34px;
+    --font-h3: 24px;
+    --font-h4: 20px;
+    --font-body-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  :root {
+    --font-h1: 36px;
+    --font-h2: 30px;
+    --font-h3: 22px;
+    --font-h4: 19px;
+    --font-body-size: 15px;
+  }
+}

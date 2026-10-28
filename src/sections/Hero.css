@@ -389,7 +389,7 @@
 
 .customer-details strong {
   color: #273247;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .customer-details span,
@@ -398,7 +398,7 @@
   align-items: center;
   gap: 6px;
   color: #8490a3;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .customer-details i,

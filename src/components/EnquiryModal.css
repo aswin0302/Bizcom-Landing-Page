@@ -132,8 +132,8 @@
   align-items: center;
   gap: 5px;
   color: #253955;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .enquiry-field label > span {
@@ -142,8 +142,8 @@
 
 .enquiry-field label > small {
   color: #8a98aa;
-  font-size: 9px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .enquiry-field input,
@@ -157,7 +157,7 @@
   color: var(--color-text);
   background: #ffffff;
   font: inherit;
-  font-size: 12px;
+  font-size: 13px;
   transition:
     border-color 160ms ease,
     box-shadow 160ms ease;
@@ -460,7 +460,7 @@
   color: var(--color-brand);
   background: transparent;
   font: inherit;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 650;
   cursor: pointer;
 }

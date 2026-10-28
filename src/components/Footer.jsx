@@ -1,18 +1,15 @@
-import {
-  ArrowUpRight,
-  Mail,
-  MessageCircle,
-} from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
 
 import "./Footer.css";
 
 const footerLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About Bizcom", href: "#about" },
-  { label: "Who It's For", href: "#audience" },
-  { label: "Features & Modules", href: "#features" },
-  { label: "Problems & Solutions", href: "#problems" },
-  { label: "How It Works", href: "#how-it-works" },
+  { label: "Home", to: "/" },
+  { label: "Features", to: "/features" },
+  { label: "Solutions", to: "/solutions" },
+  { label: "How It Works", to: "/how-it-works" },
+  { label: "Pricing", to: "/pricing" },
+  { label: "Contact Us", to: "/contact" },
 ];
 
 function Footer({ onOpenEnquiry }) {
@@ -23,13 +20,13 @@ function Footer({ onOpenEnquiry }) {
       <div className="footer-container">
         <div className="footer-main">
           <div className="footer-brand-column">
-            <a href="#home" className="footer-brand">
+            <Link to="/" className="footer-brand">
               <img
                 src={`${import.meta.env.BASE_URL}bizcom-logo.png`}
                 alt="Bizcom"
                 className="footer-logo"
-               />
-            </a>
+              />
+            </Link>
 
             <p className="footer-description">
               Business communication, simplified. Explore the ways
@@ -52,9 +49,9 @@ function Footer({ onOpenEnquiry }) {
 
             <nav aria-label="Footer navigation">
               {footerLinks.map((link) => (
-                <a key={link.href} href={link.href}>
+                <Link key={link.to} to={link.to}>
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
@@ -72,25 +69,23 @@ function Footer({ onOpenEnquiry }) {
             </p>
 
             <button
-                type="button"
-                className="footer-contact-link"
-                onClick={onOpenEnquiry}
-                >
-                Contact Bizcom
-                <ArrowUpRight size={16} />
+              type="button"
+              className="footer-contact-link"
+              onClick={onOpenEnquiry}
+            >
+              Contact Bizcom
+              <ArrowUpRight size={16} />
             </button>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>
-            © {currentYear} Bizcom. All rights reserved.
-          </p>
+          <p>© {currentYear} Bizcom. All rights reserved.</p>
 
-          <a href="#home" className="footer-back-to-top">
-            Back to top
+          <Link to="/" className="footer-back-to-top">
+            Back to home
             <ArrowUpRight size={15} />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

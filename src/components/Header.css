@@ -168,3 +168,16 @@
     transition: none;
   }
 }
+
+/* Shared header CTA button reset */
+.header-cta,
+.mobile-contact-link {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+/* Active navigation item */
+.nav-link.active {
+  color: var(--color-brand);
+  font-weight: 700;
+}

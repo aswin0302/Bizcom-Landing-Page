@@ -179,8 +179,8 @@
 .story-quote {
   margin: 13px 0 8px;
   color: #991b1b;
-  font-size: 15px;
-  font-weight: 750;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: -0.02em;
 }
@@ -246,7 +246,7 @@
   margin: 13px 0 7px;
   color: #166534;
   font-size: 16px;
-  font-weight: 750;
+  font-weight: 500;
   line-height: 1.45;
   letter-spacing: -0.02em;
 }
