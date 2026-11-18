@@ -15,9 +15,11 @@ if [ ! -s "$NVM_DIR/nvm.sh" ]; then
   curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 fi
 # shellcheck disable=SC1091
+set +eu  # nvm is not compatible with errexit/nounset
 . "$NVM_DIR/nvm.sh"
-nvm install   # reads .nvmrc, no-op if already installed
-nvm use
+nvm install "$(cat .nvmrc)" || { echo "!! nvm install failed (check internet / curl / tar / xz)"; exit 1; }
+nvm use "$(cat .nvmrc)" || { echo "!! nvm use failed"; exit 1; }
+set -eu
 echo "==> Node $(node -v)"
 
 echo "==> Pulling latest $BRANCH"
