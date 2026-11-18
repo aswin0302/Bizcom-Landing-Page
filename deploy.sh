@@ -4,7 +4,7 @@
 set -euo pipefail
 
 BRANCH="main"
-APP_DIR="/home/transport/public_html/website_bizcom"
+APP_DIR="/home/prod/public_html/website_bizcom"
 
 cd "$APP_DIR"
 
